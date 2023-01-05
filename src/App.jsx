@@ -1,6 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import swing from "./assets/swing2.png";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <h1>Deploy Test</h1>
+      <img src={swing} />
     </div>
   );
 }
