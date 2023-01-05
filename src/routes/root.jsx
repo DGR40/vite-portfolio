@@ -141,7 +141,7 @@ export default function Root() {
                 class="project-button"
                 onClick={() =>
                   goToURLSpecial(
-                    "pages.github.coecis.cornell.edu/info4340-2022fa/vue-ggie-tales-project/catalog"
+                    "pages.github.coecis.cornell.edu/info4340-2022fa/vue-ggie-tales-project/"
                   )
                 }
               >
