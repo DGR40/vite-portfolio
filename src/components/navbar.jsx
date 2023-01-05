@@ -19,8 +19,10 @@ export default function NavBar() {
             Projects
           </h5>
           <h5 className="hotlink">Contact</h5>
-          <a href={`resume`}>
-            <h5 className="hotlink">Resume</h5>
+          <a href={`resume`} target="_blank">
+            <h5 className="hotlink" id="resume-hotlink">
+              Resume
+            </h5>
           </a>
         </div>
       </div>

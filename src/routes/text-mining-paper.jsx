@@ -11,6 +11,6 @@ export default function TextAnalysis() {
 }
 
 function hideNavbar() {
-  $("#navbar").hide();
-  $("#sidebar").hide();
+  document.getElementById("navbar").style.display = "none";
+  document.getElementById("sidebar").style.display = "none";
 }

@@ -86,6 +86,22 @@ a {
   color: #035e96;
 }
 
+#resume-hotlink {
+  padding: 0.5em;
+  border: 2px solid #00304c;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* "to left" / "to right" - affects initial color */
+  background: linear-gradient(to left, white 50%, #00304c 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+  color: #035e96;
+}
+
+#resume-hotlink:hover {
+  background-position: left;
+  color: white;
+}
+
 .navbar .navbar-right {
   display: flex;
   flex-direction: row;

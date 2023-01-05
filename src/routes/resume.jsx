@@ -12,4 +12,5 @@ export default function Resume() {
 
 function hideNavbar() {
   document.getElementById("navbar").style.display = "none";
+  document.getElementById("sidebar").style.display = "none";
 }
