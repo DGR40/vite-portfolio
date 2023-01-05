@@ -130,9 +130,7 @@ export default function Root() {
                 </div>
               </div>
               <div class="project-button">
-                <a href={`text-analysis`} target="_blank">
-                  <h4>Live Mobile Prototype</h4>
-                </a>
+                <h4>Live Mobile Prototype</h4>
               </div>
             </div>
           </div>
@@ -238,11 +236,10 @@ export default function Root() {
                   <p>Seaborn</p>
                 </div>
               </div>
-              <div
-                class="project-button"
-                onClick={() => goToURL("src/assets/text-analysis.pdf")}
-              >
-                <h4>Read Full Paper</h4>
+              <div class="project-button">
+                <a href={`resume`} target="_blank">
+                  <h4>Read Full Paper</h4>
+                </a>
               </div>
             </div>
           </div>
