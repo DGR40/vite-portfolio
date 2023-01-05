@@ -19,17 +19,9 @@ export default function NavBar() {
             Projects
           </h5>
           <h5 className="hotlink">Contact</h5>
-          <h5
-            className="hotlink"
-            id="resume-hotlink"
-            onClick={() =>
-              goToURL(
-                "https://dannyrusk.netlify.app/src/assets/dgrResume2023pdf-1.pdf"
-              )
-            }
-          >
-            Resume
-          </h5>
+          <a href={`resume`}>
+            <h5 className="hotlink">Resume</h5>
+          </a>
         </div>
       </div>
     </>

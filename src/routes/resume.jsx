@@ -5,6 +5,7 @@ export default function Resume() {
   useEffect(() => hideNavbar());
   return (
     <>
+      <h1>resume</h1>
       <iframe src={PDF} style={{ width: "100vw", height: "100vh" }} />
     </>
   );
