@@ -144,7 +144,9 @@ export default function Root() {
 
           <div class="project-banner" id="data-vis">
             <div class="project-left" id="project-left project-left-video">
-              <video src={BarChartVid} autoPlay loop />
+              <video autoPlay loop>
+                <source src={BarChartVid} type="video/mp4"></source>
+              </video>
             </div>
             <div class="project-left" id="project-right">
               <h1>Interactive Data Visualization</h1>
@@ -243,11 +245,11 @@ export default function Root() {
                   <p>Seaborn</p>
                 </div>
               </div>
-              <div class="project-button">
-                <a href={`resume`} target="_blank">
+              <a href={`text-analysis`} target="_blank">
+                <div class="project-button">
                   <h4>Read Full Paper</h4>
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
           </div>
         </section>
