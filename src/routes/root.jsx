@@ -129,7 +129,14 @@ export default function Root() {
                   <p>CSS</p>
                 </div>
               </div>
-              <div class="project-button">
+              <div
+                class="project-button"
+                onClick={() =>
+                  goToURLSpecial(
+                    "https://pages.github.coecis.cornell.edu/info4340-2022fa/vue-ggie-tales-project/catalog"
+                  )
+                }
+              >
                 <h4>Live Mobile Prototype</h4>
               </div>
             </div>
