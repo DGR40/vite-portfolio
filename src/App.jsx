@@ -8,10 +8,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Deploy Test</h1>
+      <h1 onClick={() => click()}>Deploy Test</h1>
       <img src={swing} />
     </div>
   );
+}
+
+function click() {
+  console.log("click!");
 }
 
 export default App;
