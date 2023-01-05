@@ -271,7 +271,9 @@ function goToURL(url) {
 }
 
 function goToURLSpecial(url) {
-  window.open(url, "_blank", "width = 445px", "height = 100%");
+  let h = window.innerHeight;
+  console.log(h);
+  window.open(url, "_blank", "myWindowName", "resizable").resizeTo(445, h);
 }
 
 function goToDiv(divID) {
