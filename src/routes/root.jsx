@@ -53,7 +53,7 @@ export default function Root() {
                   I am a senior Information Science major at Cornell University
                   excited to graduate in <span class="blue">May 2023</span>. I
                   am looking for positions in front end development and data
-                  science. Currently, I work at{" "}
+                  science. Currently, I'm an intern at{" "}
                   <a
                     href="https://www.teamworthy.com"
                     class="tw-link"
