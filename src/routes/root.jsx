@@ -1,13 +1,5 @@
-import { NavLink } from "react-router-dom";
-import GitIcon from "../assets/github-icon.png";
-import LinkedIcon from "../assets/linkedin-icon.png";
-import ResumeIcon from "../assets/resume-icon.png";
-import emailIcon from "../assets/email-icon.png";
-import arrowIcon from "../assets/arrow-icon.png";
 import appDesign1 from "../assets/vueggie-1.png";
 import appDesign2 from "../assets/vueggie-2.png";
-import NavBar from "../components/navbar";
-import SideBar from "../components/sidebar";
 import MeOnBoat from "../assets/meonboat2.png";
 import Swing1 from "../assets/swing2.png";
 import Swing2 from "../assets/swing3.png";
@@ -137,15 +129,10 @@ export default function Root() {
                   <p>CSS</p>
                 </div>
               </div>
-              <div
-                class="project-button"
-                onClick={() =>
-                  goToURLSpecial(
-                    "pages.github.coecis.cornell.edu/info4340-2022fa/vue-ggie-tales-project/"
-                  )
-                }
-              >
-                <h4>Live Mobile Prototype</h4>
+              <div class="project-button">
+                <a href={`text-analysis`} target="_blank">
+                  <h4>Live Mobile Prototype</h4>
+                </a>
               </div>
             </div>
           </div>
