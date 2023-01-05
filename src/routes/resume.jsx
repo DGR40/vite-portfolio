@@ -5,12 +5,11 @@ export default function Resume() {
   useEffect(() => hideNavbar());
   return (
     <>
-      <h1>resume</h1>
       <iframe src={PDF} style={{ width: "100vw", height: "100vh" }} />
     </>
   );
 }
 
 function hideNavbar() {
-  document.getElementById("navbar").style("display", "none");
+  document.getElementById("navbar").style.display = "none";
 }
