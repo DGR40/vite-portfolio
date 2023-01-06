@@ -133,7 +133,7 @@ export default function Root() {
                 class="project-button"
                 onClick={() =>
                   goToURL(
-                    "https://pages.github.coecis.cornell.edu/info4340-2022fa/vue-ggie-tales-project/catalog"
+                    "https://github.com/DGR40/vue-ggie-tales-project-main"
                   )
                 }
               >
