@@ -132,12 +132,12 @@ export default function Root() {
               <div
                 class="project-button"
                 onClick={() =>
-                  goToURLSpecial(
+                  goToURL(
                     "https://pages.github.coecis.cornell.edu/info4340-2022fa/vue-ggie-tales-project/catalog"
                   )
                 }
               >
-                <h4>Live Mobile Prototype</h4>
+                <h4>Github</h4>
               </div>
             </div>
           </div>
@@ -254,8 +254,30 @@ export default function Root() {
           </div>
         </section>
 
+        <section class="typewriter banner" id="contact-section">
+          <div class="container">
+            <div class="tagline">
+              <h1>Let's get in touch...</h1>
+              <p>
+                My email is{" "}
+                <span
+                  class="blue"
+                  onClick={() => {
+                    navigator.clipboard.writeText(this.state.textToCopy);
+                  }}
+                >
+                  dgr73@cornell.edu
+                </span>
+              </p>
+              <div class="project-button" onClick={() => openEmail()}>
+                <h4>Send Me an Email</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="footer banner">
-          <h1>email phone address</h1>
+          <h1>Site designed and coded by Danny Rusk © 2023</h1>
         </section>
       </div>
     </>
@@ -283,6 +305,10 @@ function goToDiv(divID) {
   elem.scrollIntoView({
     behavior: "smooth",
   });
+}
+
+function openEmail() {
+  window.open("mailto:dgr73@cornell.edu", "_blank");
 }
 
 /*

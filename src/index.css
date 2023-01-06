@@ -49,6 +49,16 @@ a {
   height: 100px;
   background-color: #00304c !important;
   box-shadow: #00304c 0px 4px 6px -1px, #00304c 0px 2px 4px -1px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer > h1 {
+  color: #f0eeee;
+  font-size: 18px;
 }
 
 .navbar {
@@ -66,7 +76,7 @@ a {
 .navbar .navbar-left {
   display: flex;
   flex-direction: row;
-  width: 60%;
+  width: 50%;
   text-align: center;
   vertical-align: center;
   align-items: center;
@@ -147,25 +157,14 @@ a {
   background: rgb(240, 238, 238);
 }
 
-#resume-hotlink {
-  padding: 0.5em;
-  border: 2px solid #00304c;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  /* "to left" / "to right" - affects initial color */
-  background: linear-gradient(to left, white 50%, #00304c 50%) right;
-  background-size: 200%;
-  transition: 0.5s ease-out;
-}
-
-#resume-hotlink:hover {
-  background-position: left;
-  color: white;
-}
-
 .container {
   margin-top: 9em;
   flex-direction: row;
   display: flex;
+}
+
+#contact > div > h1 {
+  border-bottom: 0px;
 }
 
 #about-container {
@@ -236,13 +235,13 @@ a {
 }
 
 .tagline > h1 {
-  font-size: 50px;
+  font-size: 44px;
   border-bottom: #035e96 solid 1px;
   width: 15em;
 }
 
 .tagline > p {
-  font-size: 26px;
+  font-size: 22px;
   margin-top: 50px;
   width: 80%;
 }
@@ -352,11 +351,12 @@ a {
 
 #project-right {
   margin-left: 3em;
+  font-size: 22px;
 }
 
 .project-left > p {
   margin-top: 2em;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .disclaimer {

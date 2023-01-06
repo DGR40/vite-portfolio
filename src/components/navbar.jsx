@@ -18,7 +18,9 @@ export default function NavBar() {
           <h5 className="hotlink" onClick={() => goToDiv("project-section")}>
             Projects
           </h5>
-          <h5 className="hotlink">Contact</h5>
+          <h5 className="hotlink" onClick={() => goToDiv("contact-section")}>
+            Contact
+          </h5>
           <a href={`resume`} target="_blank">
             <h5 className="hotlink" id="resume-hotlink">
               Resume
