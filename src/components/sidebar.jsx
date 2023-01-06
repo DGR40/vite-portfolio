@@ -9,7 +9,7 @@ export default function SideBar() {
     <>
       <div className="sidebar" id="sidebar">
         <a
-          href="https:github.com/DGR40"
+          href="https://www.github.com/DGR40"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -32,11 +32,15 @@ export default function SideBar() {
           </div>
         </a>
         <a>
-          <div className="icon-circle" id="mail">
+          <div className="icon-circle" id="mail" onClick={() => openEmail()}>
             <img className="icon" src={emailIcon} />
           </div>
         </a>
       </div>
     </>
   );
+}
+
+function openEmail() {
+  window.open("mailto:dgr73@cornell.edu", "_blank");
 }
