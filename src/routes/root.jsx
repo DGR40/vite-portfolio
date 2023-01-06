@@ -144,7 +144,7 @@ export default function Root() {
 
           <div class="project-banner" id="data-vis">
             <div class="project-left" id="project-left project-left-video">
-              <video autoPlay loop>
+              <video autoPlay loop controls>
                 <source src={BarChartVid} type="video/mp4"></source>
               </video>
             </div>
