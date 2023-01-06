@@ -54,17 +54,10 @@ export default function Root() {
                     {" "}
                     Teamworthy Ventures{" "}
                   </a>
-                  doing frontend development on their internal platform.
+                  doing frontend development on their internal platform. Some of
+                  the technologies I utilize through my courses and work
+                  include:
                 </p>
-                <p id="about-second" class="about-words-p">
-                  I have worked at a start-up, VC Firm, and my school's labs.
-                  Through my coursework and experience I have learned how to
-                  create <span class="blue">powerful</span> and
-                  <span class="blue"> intuitive</span> tools to best help the
-                  users achieve their goals. Some of the technologies I utilize
-                  the most are:
-                </p>
-
                 <div class="tags">
                   <div class="tag">
                     <p>JavaScript (ES6)</p>
@@ -85,6 +78,11 @@ export default function Root() {
                     <p>SQL</p>
                   </div>
                 </div>
+                <p id="about-second" class="about-words-p">
+                  When I am not programming for the web, I enjoy playing
+                  basketball on the Cornell Club Men's team, going to the beach
+                  with my family and two dogs, and playing the guitar.
+                </p>
               </div>
             </div>
 
