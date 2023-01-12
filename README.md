@@ -1,4 +1,4 @@
-# vite-portfolio
+# My Portfolio Website
 
 This is my current portfolio website project. You can visit my website at https://dannyrusk.netlify.app/
 
