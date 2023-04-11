@@ -105,11 +105,11 @@ export default function Root() {
             <div class="project-left" id="project-right">
               <h1>Eat Better, Eat Boston</h1>
               <p>
-                Created a restaurant finder that allows users to discover new
-                places to eat. The finder visualizes each restaurant onto a map
-                of Boston and lets users filter by cuisine type. Ratings are
-                indicated by color and user can hover over restaurant to glean
-                more info.
+                Collaborated with partner to create a restaurant finder that
+                allows users to discover new places to eat. The finder
+                visualizes each restaurant onto a map of Boston and lets users
+                filter by cuisine type. Ratings are indicated by color and user
+                can hover over restaurant to glean more info.
               </p>
               <div class="tags">
                 <div class="tag-1">
@@ -129,9 +129,7 @@ export default function Root() {
                 <div
                   class="project-button smaller"
                   onClick={() =>
-                    goToURL(
-                      "https://github.com/DGR40/data-driven-web-dev-project2"
-                    )
+                    goToURL("https://github.com/DGR40/INFO-4310-HW3")
                   }
                 >
                   <h4>GitHub</h4>
