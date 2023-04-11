@@ -6,6 +6,7 @@ import Swing2 from "../assets/swing3.png";
 import BarChartVid from "../assets/data-vis-1.mp4";
 import TextAnalysis from "../assets/text-analysis-1.png";
 import HomeDesign from "../assets/home-design.png";
+import Boston from "../assets/boston.png";
 
 export default function Root() {
   return (
@@ -96,6 +97,57 @@ export default function Root() {
           <div class="project-container">
             <h1>Projects</h1>
           </div>
+
+          <div class="project-banner" id="boston">
+            <div class="project-left" id="project-left">
+              <img src={Boston} class="boston-img" />
+            </div>
+            <div class="project-left" id="project-right">
+              <h1>Eat Better, Eat Boston</h1>
+              <p>
+                Created a restaurant finder that allows users to discover new
+                places to eat. The finder visualizes each restaurant onto a map
+                of Boston and lets users filter by cuisine type. Ratings are
+                indicated by color and user can hover over restaurant to glean
+                more info.
+              </p>
+              <div class="tags">
+                <div class="tag-1">
+                  <p>D3.js</p>
+                </div>
+                <div class="tag-1">
+                  <p>JavaScript</p>
+                </div>
+                <div class="tag-1">
+                  <p>HTML</p>
+                </div>
+                <div class="tag-1">
+                  <p>CSS</p>
+                </div>
+              </div>
+              <div class="double-button">
+                <div
+                  class="project-button smaller"
+                  onClick={() =>
+                    goToURL(
+                      "https://github.com/DGR40/data-driven-web-dev-project2"
+                    )
+                  }
+                >
+                  <h4>GitHub</h4>
+                </div>
+                <div
+                  class="project-button smaller"
+                  onClick={() =>
+                    goToURL("https://eatbettereatboston.netlify.app")
+                  }
+                >
+                  <h4>Live</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="project-banner">
             <div class="project-left" id="project-left">
               <img src={appDesign2} />
