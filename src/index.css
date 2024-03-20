@@ -1,10 +1,10 @@
 :root {
-  --clr-primary: #65b7e5;
-  --clr-secondary-900: #035e96;
+  --clr-primary: #39ace7;
+  --clr-secondary-900: ;
   --clr-secondary-400: #e7f6ff;
   --clr-secondary-200: #f0eeee;
 
-  --clr-neutral-200: #ffff;
+  --clr-neutral-200: #192428;
   --clr-neutral-900: rgb(0, 0, 0);
 
   --ff-primary: "Roboto Slab", sans-serif;
@@ -13,6 +13,14 @@
 
 a {
   text-decoration: none;
+}
+
+.sticky {
+  position: "sticky";
+  position: "-webkit-sticky";
+  position: "-moz-sticky";
+  position: "-ms-sticky";
+  position: "-o-sticky";
 }
 
 *,
@@ -39,6 +47,9 @@ body {
   justify-content: center;
   flex-direction: column;
   font-size: 1rem;
+  z-index: 999;
+  background-color: var(--night);
+  overscroll-behavior: contain;
 }
 
 a {
@@ -141,7 +152,7 @@ a {
 }
 
 .blue {
-  color: #035e96;
+  color: var(--cambridge-blue);
   font-weight: bolder;
 }
 
@@ -150,11 +161,11 @@ a {
 }
 
 .banner {
-  color: black;
+  color: white;
   display: flex;
   flex-direction: column;
-  background-color: #f0eeee;
-  background: rgb(240, 238, 238);
+  background-color: var(--eerie-black);
+  height: 100%;
 }
 
 .container {
