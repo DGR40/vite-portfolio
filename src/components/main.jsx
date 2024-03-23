@@ -1,7 +1,10 @@
-export default function Main() {
+import { forwardRef } from "react";
+export default forwardRef(function Main({}, ref) {
+  const { aboutSectionRef, projectSectionRef, contactSectionRef } = ref;
+
   return (
     <div id="main">
-      <div className="main-section">
+      <div className="main-section" ref={aboutSectionRef}>
         <p className="paragraph">
           I began in highschool when I started making websites just for fun. I
           continued this passion at
@@ -57,9 +60,9 @@ export default function Main() {
         </p>
       </div>
 
-      <div className="project">
+      <div className="project" ref={projectSectionRef}>
         <h1>Sit Up: Tensorflow.js and React Slouch Detection Tool</h1>
       </div>
     </div>
   );
-}
+});

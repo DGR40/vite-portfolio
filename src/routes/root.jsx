@@ -12,10 +12,36 @@ import Sidebar from "../components/sidebar.jsx";
 import Main from "../components/main.jsx";
 
 export default function Root() {
+  function handleNavClick(index) {
+    console.log("got index", index);
+    switch (index) {
+      case 0:
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        break;
+      case 1:
+        projectSectionRef.current.scrollIntoView({ behavior: "smooth" });
+        break;
+      case 2:
+        contactSectionRef.current.scrollIntoView({ behavior: "smooth" });
+        break;
+    }
+  }
+
+  //// REFS /////////////////////////////////////////////////////////////////////
+
+  // Section Refs
+  const aboutSectionRef = useRef();
+  const projectSectionRef = useRef();
+  const contactSectionRef = useRef();
+  const sectionRefs = { aboutSectionRef, projectSectionRef, contactSectionRef };
+
+  // Nav Menu Refs
+  const menuItemRefs = useRef([]);
+
   return (
     <main id="container">
-      <Sidebar />
-      <Main />
+      <Sidebar handleNavClick={handleNavClick} ref={menuItemRefs} />
+      <Main ref={sectionRefs} />
     </main>
   );
 }

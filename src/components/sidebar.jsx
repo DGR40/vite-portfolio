@@ -1,8 +1,8 @@
-import { useRef } from "react";
+import { useRef, forwardRef } from "react";
 import Name from "./name";
 import Links from "./Links";
 
-export default function Sidebar() {
+export default forwardRef(function Sidebar({ handleNavClick }, menuItemRefs) {
   // adds in blob animation
   const blobRef = useRef();
 
@@ -24,7 +24,6 @@ export default function Sidebar() {
   }
 
   const menuItems = ["ABOUT", "PROJECTS", "CONTACT"];
-  const menuItemRefs = useRef([]);
 
   function handleMakeActive(index) {
     menuItemRefs.current[index].dataset.activeIndex = index;
@@ -54,8 +53,7 @@ export default function Sidebar() {
               onMouseOver={() => handleMakeActive(index)}
               ref={(ref) => (menuItemRefs.current[index] = ref)}
               className="menu-item"
-              onSection={false}
-              onClick={() => handleOnClick(index)}
+              onClick={() => handleNavClick(index)}
             >
               {itemName}
             </div>
@@ -65,4 +63,4 @@ export default function Sidebar() {
       </div>
     </div>
   );
-}
+});
