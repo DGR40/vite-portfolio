@@ -1,46 +1,68 @@
-import { NavLink } from "react-router-dom";
-import GitIcon from "../assets/github-icon.png";
-import LinkedIcon from "../assets/linkedin-icon.png";
-import ResumeIcon from "../assets/resume-icon.png";
-import emailIcon from "../assets/email-icon.png";
+import { useRef } from "react";
+import Name from "./name";
+import Links from "./Links";
 
-export default function SideBar() {
+export default function Sidebar() {
+  // adds in blob animation
+  const blobRef = useRef();
+
+  const aboutRef = useRef();
+  const projectsRef = useRef();
+  const contactRef = useRef();
+
+  function handlePointerMove(e) {
+    return;
+    // const { clientX, clientY } = e;
+
+    // blobRef.current.animate(
+    //   {
+    //     left: `${clientX}px`,
+    //     top: `${clientY}px`,
+    //   },
+    //   { duration: 3000, fill: "forwards" }
+    // );
+  }
+
+  const menuItems = ["ABOUT", "PROJECTS", "CONTACT"];
+  const menuItemRefs = useRef([]);
+
+  function handleMakeActive(index) {
+    menuItemRefs.current[index].dataset.activeIndex = index;
+  }
+
+  function handleOnClick(index) {
+    console.log(menuItemRefs.current);
+    console.log(typeof menuItemRefs);
+  }
+
   return (
-    <>
-      <div className="sidebar" id="sidebar">
-        <a
-          href="https://www.github.com/DGR40"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="icon-circle" id="git">
-            <img className="icon" src={GitIcon} />
-          </div>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/daniel-rusk/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="icon-circle" id="in">
-            <img className="icon" src={LinkedIcon} />
-          </div>
-        </a>
-        <a href="/resume" target="_blank">
-          <div className="icon-circle" id="res">
-            <img className="icon" src={ResumeIcon} />
-          </div>
-        </a>
-        <a>
-          <div className="icon-circle" id="mail" onClick={() => openEmail()}>
-            <img className="icon" src={emailIcon} />
-          </div>
-        </a>
-      </div>
-    </>
-  );
-}
+    <div onPointerMove={handlePointerMove} id="sidebar">
+      {/* <div id="blob" ref={blobRef}></div>
+      <div id="blur"></div> */}
 
-function openEmail() {
-  window.open("mailto:dgr73@cornell.edu", "_blank");
+      <div id="menu">
+        <div id="name-container">
+          <Name text="DANNY" jumble={"GRHYB"} />
+          <Name text="RUSK" jumble={"WXVB"} second={true} />
+          <p>Frontend developer, data analyst, dog lover.</p>
+        </div>
+
+        <div id="menu-items">
+          {menuItems.map((itemName, index) => (
+            <div
+              key={index}
+              onMouseOver={() => handleMakeActive(index)}
+              ref={(ref) => (menuItemRefs.current[index] = ref)}
+              className="menu-item"
+              onSection={false}
+              onClick={() => handleOnClick(index)}
+            >
+              {itemName}
+            </div>
+          ))}
+        </div>
+        <Links />
+      </div>
+    </div>
+  );
 }
