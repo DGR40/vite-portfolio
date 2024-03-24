@@ -1,10 +1,21 @@
 import { forwardRef } from "react";
-export default forwardRef(function Main({}, ref) {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import Tags from "./tags.jsx";
+import SlouchApp from "../assets/slouch-app.jpeg";
+
+// icons import
+
+export default forwardRef(function Main({ handleScroll }, ref) {
   const { aboutSectionRef, projectSectionRef, contactSectionRef } = ref;
 
+  function goToURL(url) {
+    window.open(url, "_blank");
+  }
+
   return (
-    <div id="main">
-      <div className="main-section" ref={aboutSectionRef}>
+    <div id="main" onScroll={handleScroll}>
+      <div className="main-section" ref={aboutSectionRef} id={0}>
         <p className="paragraph">
           I began in highschool when I started making websites just for fun. I
           continued this passion at
@@ -60,8 +71,38 @@ export default forwardRef(function Main({}, ref) {
         </p>
       </div>
 
-      <div className="project" ref={projectSectionRef}>
-        <h1>Sit Up: Tensorflow.js and React Slouch Detection Tool</h1>
+      <div
+        className="project"
+        ref={projectSectionRef}
+        id={1}
+        onClick={() => goToURL("https://dgr40.github.io/slouch-app/")}
+      >
+        <div className="project-info">
+          <h2 className="project-header">
+            SIT UP: SLOUCH DETECTION TOOL{" "}
+            <span>
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            </span>
+          </h2>
+          <p className="paragraph">
+            I created a productivity tool that uses the browser's webcam and a
+            pose estimation Machine Learning model to monitor the user's posture
+            in real time. It pings the user when they are slouching and provides
+            a dashboard analyzing their sitting habits.
+          </p>
+          <div className="tag-container">
+            <Tags
+              tagList={["Tensorflow.js", "React", "HTML", "CSS", "Javascript"]}
+            />
+          </div>
+        </div>
+        <div className="project-image">
+          <img src={SlouchApp} className="project-thumbnail" />
+        </div>
+      </div>
+
+      <div className="project" ref={contactSectionRef} id={2}>
+        <h1>CONTACT</h1>
       </div>
     </div>
   );

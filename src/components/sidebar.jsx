@@ -2,7 +2,10 @@ import { useRef, forwardRef } from "react";
 import Name from "./name";
 import Links from "./Links";
 
-export default forwardRef(function Sidebar({ handleNavClick }, menuItemRefs) {
+export default forwardRef(function Sidebar(
+  { handleNavClick, activeMenuItemId },
+  menuItemRefs
+) {
   // adds in blob animation
   const blobRef = useRef();
 
@@ -52,7 +55,9 @@ export default forwardRef(function Sidebar({ handleNavClick }, menuItemRefs) {
               key={index}
               onMouseOver={() => handleMakeActive(index)}
               ref={(ref) => (menuItemRefs.current[index] = ref)}
-              className="menu-item"
+              className={`menu-item ${
+                activeMenuItemId == index ? "active" : ""
+              } `}
               onClick={() => handleNavClick(index)}
             >
               {itemName}
