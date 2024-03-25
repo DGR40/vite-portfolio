@@ -26,6 +26,10 @@ export default forwardRef(function Sidebar(
     // );
   }
 
+  function goToURL(url) {
+    window.open(url, "_blank");
+  }
+
   const menuItems = ["ABOUT", "PROJECTS", "CONTACT"];
 
   function handleMakeActive(index) {
@@ -63,7 +67,16 @@ export default forwardRef(function Sidebar(
               {itemName}
             </div>
           ))}
+          <div
+            key="3"
+            onMouseOver={() => handleMakeActive(index)}
+            className={activeMenuItemId == 3 ? "menu-item active" : "menu-item"}
+            onClick={() => goToURL("/resume")}
+          >
+            RESUME
+          </div>
         </div>
+
         <Links />
       </div>
     </div>

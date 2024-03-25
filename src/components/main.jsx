@@ -1,24 +1,31 @@
 import { forwardRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import Tags from "./tags.jsx";
+import Project from "./project";
 import SlouchApp from "../assets/slouch-app.jpeg";
+import IvyApp from "../assets/ivy-app.jpeg";
+import TextApp from "../assets/TextAppTall.jpg";
+import GitIcon from "../assets/github-icon.png";
+import MePic from "../assets/me-lake.jpg";
 
 // icons import
 
 export default forwardRef(function Main({ handleScroll }, ref) {
   const { aboutSectionRef, projectSectionRef, contactSectionRef } = ref;
 
-  function goToURL(url) {
-    window.open(url, "_blank");
+  function openEmail() {
+    window.open("mailto:dgr73@cornell.edu");
   }
 
   return (
     <div id="main" onScroll={handleScroll}>
+      <div className="section-marker" ref={projectSectionRef} id={1}>
+        about
+      </div>
+
       <div className="main-section" ref={aboutSectionRef} id={0}>
         <p className="paragraph">
-          I began in highschool when I started making websites just for fun. I
-          continued this passion at
+          I began programming in highschool when I started making websites just
+          for fun. Once I learned Javascript, the flood gates opened. I
+          continued my passion for development at
           <span className="text-highlight"> Cornell University </span>where I
           studied Information Science. Throughout my time, I first learned
           <span className="text-highlight-subtle"> Python </span> then Object
@@ -61,48 +68,94 @@ export default forwardRef(function Main({ handleScroll }, ref) {
         <br />
         <p className="paragraph">
           Now, I am a data analyst at{" "}
-          <span className="text-highlight">Northwell Health</span>. I created
+          <span className="text-highlight">Northwell Health</span>. I create
           programs to automate the daily tasks of the business teams using
-          Python. One project I am most proud of is my automated scheduler.
-          Instead of a business analyst taking hours to assign trainers to
-          classes by week, my program does it by month in seconds, ensuring no
-          trainer is assigned too many classes and there is variety in the
-          classes they are assigned.
+          Python. I pride myself on saving analysts hours upon hours of manual
+          work with my code. I also learned to wrangle data sources with over
+          100,000 employees, cleaning, prepping, and extracting meaning.
+        </p>
+        <br />
+        <p class="paragraph">
+          Outside of coding, I enjoy playing basketball (Go Knicks), hanging
+          with my two dogs, and going to the beach.
+        </p>
+        <br />
+        <p class="paragraph text-link">
+          {" "}
+          <a
+            className="text-highlight text-link underline"
+            href="/resume"
+            target="_blank"
+          >
+            Read more in my resume
+          </a>
         </p>
       </div>
 
-      <div
-        className="project"
-        ref={projectSectionRef}
-        id={1}
-        onClick={() => goToURL("https://dgr40.github.io/slouch-app/")}
-      >
+      <div className="section-marker" ref={projectSectionRef} id={1}>
+        projects
+      </div>
+
+      <Project
+        title={"SIT UP: SLOUCH DETECTOR"}
+        projectId={"situp"}
+        description={
+          "I created a productivity tool that uses the browser's webcam and a pose estimation Machine Learning model to monitor the user's posture in real time. It pings the user when they are slouching and provides a dashboard analyzing their sitting habits."
+        }
+        tagList={["Tensorflow.js", "React", "HTML", "CSS", "Javascript"]}
+        image={SlouchApp}
+        url={"https://dgr40.github.io/slouch-app/"}
+      />
+
+      <Project
+        title={"ARE IVIES WORTH IT? INTERACTIVE ARTICLE"}
+        projectId={"ivies"}
+        description={
+          "My partner and I produced an article researching whether or not an ivy league education is worth it. I created the interactive exploratory chart that allows users to look at the relationship between cost, median debt, median earnings, etc of the top 100 universities. I also built the compare feature: the user can select two schools of interest and quickly see a quantitative comparison of their stats."
+        }
+        tagList={["D3.js", "HTML", "CSS", "Javascript"]}
+        image={IvyApp}
+        url={"https://are-ivies-worth-it.netlify.app/"}
+      />
+
+      <Project
+        title={"SENTIMENT ANALYSIS OF CLASSIC AMERICAN NOVELS: NLP"}
+        projectId={"sentiment"}
+        description={
+          "For my final project in Text Mining Literature, I investigated the sentiment surrounding catholicism during the time period 1820-1865. I parsed out any word that was included of my list of catholic-associated words. I then scored the positive and negative sentiment of the words surrounded the target word and compiled my results in this paper. Click to read more... "
+        }
+        tagList={["Python", "Seaborn", "SciPy", "Sklearn", "NLTK"]}
+        image={TextApp}
+        url={"/text-analysis"}
+      />
+
+      <div className="section-marker" ref={contactSectionRef} id={2}>
+        contact
+      </div>
+
+      <div className="project" id="contact">
         <div className="project-info">
-          <h2 className="project-header">
-            SIT UP: SLOUCH DETECTION TOOL{" "}
-            <span>
-              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-            </span>
-          </h2>
+          <h1 className="project-header">CONTACT</h1>
           <p className="paragraph">
-            I created a productivity tool that uses the browser's webcam and a
-            pose estimation Machine Learning model to monitor the user's posture
-            in real time. It pings the user when they are slouching and provides
-            a dashboard analyzing their sitting habits.
+            Thanks for checking out my website. If you are interested, let's
+            stay in touch!
           </p>
-          <div className="tag-container">
-            <Tags
-              tagList={["Tensorflow.js", "React", "HTML", "CSS", "Javascript"]}
-            />
-          </div>
+          <button className="contact-button" onClick={() => openEmail()}>
+            SEND ME AN EMAIL
+          </button>
         </div>
         <div className="project-image">
-          <img src={SlouchApp} className="project-thumbnail" />
+          <img src={MePic} id={"contact"} className="project-thumbnail" />
         </div>
       </div>
 
-      <div className="project" ref={contactSectionRef} id={2}>
-        <h1>CONTACT</h1>
+      <div className="project" id="info">
+        <div className="project-info">
+          <p className="paragraph text-center">
+            This site was coded from scratch with HTML, CSS, and Javascript
+            using the React framework. Danny Rusk © 2024
+          </p>
+        </div>
       </div>
     </div>
   );
