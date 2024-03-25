@@ -5,10 +5,12 @@ import IvyApp from "../assets/ivy-app.jpeg";
 import TextApp from "../assets/TextAppTall.jpg";
 import GitIcon from "../assets/github-icon.png";
 import MePic from "../assets/me-lake.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 // icons import
 
-export default forwardRef(function Main({ handleScroll }, ref) {
+export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
   const { aboutSectionRef, projectSectionRef, contactSectionRef } = ref;
 
   function openEmail() {
@@ -17,17 +19,22 @@ export default forwardRef(function Main({ handleScroll }, ref) {
 
   return (
     <div id="main" onScroll={handleScroll}>
-      <div className="section-marker" ref={projectSectionRef} id={1}>
-        about
-      </div>
-
+      <div className="section-marker">about</div>
       <div className="main-section" ref={aboutSectionRef} id={0}>
         <p className="paragraph">
           I began programming in highschool when I started making websites just
           for fun. Once I learned Javascript, the flood gates opened. I
-          continued my passion for development at
-          <span className="text-highlight"> Cornell University </span>where I
-          studied Information Science. Throughout my time, I first learned
+          continued my passion for development at{" "}
+          <a
+            href="https://infosci.cornell.edu/"
+            className="text-highlight"
+            target="_blank"
+            id="cornell"
+          >
+            Cornell University
+          </a>{" "}
+          where I studied Information Science. Throughout my time, I first
+          learned
           <span className="text-highlight-subtle"> Python </span> then Object
           Oriented Programming with{" "}
           <span className="text-highlight-subtle">Java</span>, and later{" "}
@@ -68,26 +75,36 @@ export default forwardRef(function Main({ handleScroll }, ref) {
         <br />
         <p className="paragraph">
           Now, I am a data analyst at{" "}
-          <span className="text-highlight">Northwell Health</span>. I create
-          programs to automate the daily tasks of the business teams using
-          Python. I pride myself on saving analysts hours upon hours of manual
-          work with my code. I also learned to wrangle data sources with over
-          100,000 employees, cleaning, prepping, and extracting meaning.
+          <a
+            href="https://www.northwell.edu/"
+            className="text-highlight"
+            target="_blank"
+          >
+            Northwell Health
+          </a>
+          . I create programs to automate the daily tasks of the business teams
+          using Python. I pride myself on saving analysts hours upon hours of
+          manual work with my code. I also learned to wrangle data sources with
+          over 100,000 employees, cleaning, prepping, and extracting meaning.
         </p>
         <br />
-        <p class="paragraph">
-          Outside of coding, I enjoy playing basketball (Go Knicks), hanging
+        <p className="paragraph">
+          Outside of coding, I enjoy playing basketball (go Knicks!), hanging
           with my two dogs, and going to the beach.
         </p>
         <br />
-        <p class="paragraph text-link">
+        <p className="paragraph text-link">
           {" "}
           <a
             className="text-highlight text-link underline"
             href="/resume"
             target="_blank"
           >
-            Read more in my resume
+            Read more in my resume{" "}
+            <FontAwesomeIcon
+              icon={faArrowUpRightFromSquare}
+              className="project-header-icon"
+            />
           </a>
         </p>
       </div>
@@ -147,6 +164,10 @@ export default forwardRef(function Main({ handleScroll }, ref) {
         <div className="project-image">
           <img src={MePic} id={"contact"} className="project-thumbnail" />
         </div>
+      </div>
+
+      <div className="section-marker" id={5}>
+        footer
       </div>
 
       <div className="project" id="info">

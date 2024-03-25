@@ -42,14 +42,20 @@ export default forwardRef(function Sidebar(
   }
 
   return (
-    <div onPointerMove={handlePointerMove} id="sidebar">
+    <div
+      onPointerMove={handlePointerMove}
+      id="sidebar"
+      ref={(ref) => (menuItemRefs.current[3] = ref)}
+    >
       {/* <div id="blob" ref={blobRef}></div>
       <div id="blur"></div> */}
 
       <div id="menu">
         <div id="name-container">
-          <Name text="DANNY" jumble={"GRHYB"} />
-          <Name text="RUSK" jumble={"WXVB"} second={true} />
+          <div id="name-container-flex">
+            <Name text="DANNY" jumble={"GRHYB"} />
+            <Name text="RUSK" jumble={"WXVB"} second={true} />
+          </div>
           <p>Frontend developer, data analyst, dog lover.</p>
         </div>
 
@@ -69,7 +75,6 @@ export default forwardRef(function Sidebar(
           ))}
           <div
             key="3"
-            onMouseOver={() => handleMakeActive(index)}
             className={activeMenuItemId == 3 ? "menu-item active" : "menu-item"}
             onClick={() => goToURL("/resume")}
           >

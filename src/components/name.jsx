@@ -6,7 +6,6 @@ export default function Name({ text, jumble, second = false, handleStop }) {
   const [stop, setStop] = useState(false);
   const [firstTime, setFirstTime] = useState(true);
   const originalText = text;
-  console.log("original", originalText);
 
   useEffect(() => {
     if (second) {
@@ -31,14 +30,11 @@ export default function Name({ text, jumble, second = false, handleStop }) {
           })
           .join("");
         if (iterations.current >= originalText.length) {
-          console.log("stopping interval");
           setStop(true);
-          console.log(stop);
           return;
         }
 
         iterations.current += 1 / 3;
-        console.log(iterations);
       }, 30);
 
       return () => {
@@ -63,13 +59,11 @@ export default function Name({ text, jumble, second = false, handleStop }) {
         })
         .join("");
       if (iterations >= nameRef.current.innerText.length) {
-        console.log("stopping interval");
         clearInterval(intervalId);
         return;
       }
 
       iterations += 1 / 3;
-      console.log(iterations);
     }, 30);
   }
 
