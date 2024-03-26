@@ -1,3 +1,4 @@
+
 import { useRef, useEffect, useState } from "react";
 import Sidebar from "../components/sidebar.jsx";
 import Main from "../components/main.jsx";
@@ -24,7 +25,6 @@ export default function Root() {
           setShowScrollHeader(true);
         }
       });
-
       // Check if Bottom of Name Header is visible (only in vertical view)
       const headerRef = menuItemRefs.current[3];
 

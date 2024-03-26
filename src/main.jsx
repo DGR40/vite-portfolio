@@ -6,6 +6,7 @@ import "./index.css";
 import Root from "./routes/root";
 import Resume from "./routes/resume";
 import TextAnalysis from "./routes/text-mining-paper";
+import HumanAI from "./routes/human-ai-paper";
 import "./index.css";
 import NavBar from "./components/navbar";
 import SideBar from "./components/Links";
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/text-analysis",
     element: <TextAnalysis />,
+  },
+  {
+    path: "/human-ai.pdf",
+    element: <HumanAI />,
   },
 ]);
 

@@ -477,3 +477,16 @@ body {
   filter: grayscale(100%);
   border: var(--clr-accent);
 }
+
+.double-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-bottom: ;
+}
+
+.boston-img {
+  width: 100% !important;
+  margin-bottom: 4%;
+  padding-bottom: 4%;
+}
