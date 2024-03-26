@@ -11,7 +11,7 @@ export default function Name({ text, jumble, second = false, handleStop }) {
     if (second) {
       setTimeout(() => {
         setFirstTime(false);
-      }, 300);
+      }, 500);
     } else {
       setFirstTime(false);
     }
@@ -34,7 +34,7 @@ export default function Name({ text, jumble, second = false, handleStop }) {
           return;
         }
 
-        iterations.current += 1 / 3;
+        iterations.current += 1 / 7;
       }, 30);
 
       return () => {
