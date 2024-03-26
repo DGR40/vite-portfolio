@@ -14,8 +14,4 @@ function App() {
   );
 }
 
-function click() {
-  console.log("click!");
-}
-
 export default App;

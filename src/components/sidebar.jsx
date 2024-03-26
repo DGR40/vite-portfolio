@@ -36,11 +36,6 @@ export default forwardRef(function Sidebar(
     menuItemRefs.current[index].dataset.activeIndex = index;
   }
 
-  function handleOnClick(index) {
-    console.log(menuItemRefs.current);
-    console.log(typeof menuItemRefs);
-  }
-
   return (
     <div
       onPointerMove={handlePointerMove}

@@ -1,6 +1,5 @@
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Tags from "./tags";
-import { forwardRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Project({

@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import GitIcon from "../assets/github-icon.png";
 import LinkedIcon from "../assets/linkedin-icon.png";
 import ResumeIcon from "../assets/resume-icon.png";

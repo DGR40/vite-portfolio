@@ -3,7 +3,6 @@ import Project from "./project";
 import SlouchApp from "../assets/slouch-app.jpeg";
 import IvyApp from "../assets/ivy-app.jpeg";
 import TextApp from "../assets/TextAppTall.jpg";
-import GitIcon from "../assets/github-icon.png";
 import MePic from "../assets/me-lake.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -177,6 +176,10 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
             using the React framework. Danny Rusk © 2024
           </p>
         </div>
+      </div>
+
+      <div className="section-marker" id={5}>
+        footer
       </div>
     </div>
   );
