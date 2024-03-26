@@ -195,7 +195,7 @@ body {
 }
 
 #cornell:hover {
-  cursor: url("src/assets/cornell-xs.jpeg"), all-scroll;
+  cursor: url("src/assets/cornell-xs.jpeg"), pointer;
 }
 
 /* Projects  */
