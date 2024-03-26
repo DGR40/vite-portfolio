@@ -9,7 +9,7 @@ import TextAnalysis from "./routes/text-mining-paper";
 import HumanAI from "./routes/human-ai-paper";
 import "./index.css";
 import NavBar from "./components/navbar";
-import SideBar from "./components/sidebar";
+import SideBar from "./components/Links";
 
 const router = createBrowserRouter([
   {
@@ -32,8 +32,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <NavBar />
-    <SideBar />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

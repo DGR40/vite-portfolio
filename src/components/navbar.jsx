@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import MeOnBoat from "../assets/meonboat2.png";
 
 export default function NavBar() {
