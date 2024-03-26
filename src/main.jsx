@@ -8,7 +8,6 @@ import Resume from "./routes/resume";
 import TextAnalysis from "./routes/text-mining-paper";
 import HumanAI from "./routes/human-ai-paper";
 import "./index.css";
-import SideBar from "./components/links";
 
 const router = createBrowserRouter([
   {
