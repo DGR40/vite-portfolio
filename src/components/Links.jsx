@@ -16,7 +16,7 @@ export default function Links() {
           rel="noopener noreferrer"
         >
           <div className="icon-circle" id="git">
-            <img className="icon" src={GitIcon} />
+            <img className="icon" src={GitIcon} alt="My Github Icon" />
           </div>
         </a>
         <a
@@ -25,19 +25,17 @@ export default function Links() {
           rel="noopener noreferrer"
         >
           <div className="icon-circle" id="in">
-            <img className="icon" src={LinkedIcon} />
+            <img className="icon" src={LinkedIcon} alt="My Linkedin Icon" />
           </div>
         </a>
         <a href="/resume" target="_blank">
           <div className="icon-circle" id="res">
-            <img className="icon" src={ResumeIcon} />
+            <img className="icon" src={ResumeIcon} alt="My Resume Icon" />
           </div>
         </a>
-        <a>
-          <div className="icon-circle" id="mail" onClick={() => openEmail()}>
-            <img className="icon" src={emailIcon} />
-          </div>
-        </a>
+        <div className="icon-circle" id="mail" onClick={() => openEmail()}>
+          <img className="icon" src={emailIcon} alt="Mail Icon" />
+        </div>
       </div>
     </>
   );

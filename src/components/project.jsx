@@ -9,6 +9,7 @@ export default function Project({
   tagList,
   image,
   url,
+  imageAltText,
 }) {
   function goToURL(url) {
     window.open(url, "_blank");
@@ -31,7 +32,12 @@ export default function Project({
         </div>
       </div>
       <div className="project-image">
-        <img src={image} id={projectId} className="project-thumbnail" />
+        <img
+          src={image}
+          id={projectId}
+          className="project-thumbnail"
+          alt={imageAltText}
+        />
       </div>
     </div>
   );
