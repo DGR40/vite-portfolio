@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "pt_sansregular";
+  src: url("./assets/fonts/ptsans-regular.woff2") format("woff2"),
+    url("/assets/fonts/ptsans-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --clr-primary: #65b7e5;
   --clr-accent: rgb(0, 255, 234);
@@ -165,7 +173,7 @@ body {
 .paragraph {
   font-size: clamp(0.5rem, 5vw, 1rem);
   color: rgba(255, 255, 255, 0.5);
-  font-family: "PT Sans";
+  font-family: "pt_sansregular";
 }
 
 .text-highlight {
