@@ -1,6 +1,6 @@
 import { useRef, forwardRef } from "react";
 import Name from "./name";
-import Links from "./Links";
+import Links from "./links";
 
 export default forwardRef(function Sidebar(
   { handleNavClick, activeMenuItemId },

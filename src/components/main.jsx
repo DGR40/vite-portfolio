@@ -121,6 +121,7 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
         tagList={["Tensorflow.js", "React", "HTML", "CSS", "Javascript"]}
         image={SlouchApp}
         url={"https://dgr40.github.io/slouch-app/"}
+        imageAltText="Screenshot of Slouch Detecting Web App made with Tensorflow.js and React"
       />
 
       <Project
@@ -132,6 +133,7 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
         tagList={["D3.js", "HTML", "CSS", "Javascript"]}
         image={IvyApp}
         url={"https://are-ivies-worth-it.netlify.app/"}
+        imageAltText="Screenshot of interactive New York Times style article on whether or not Ivy League Education is worth it."
       />
 
       <Project
@@ -143,6 +145,7 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
         tagList={["Python", "Seaborn", "SciPy", "Sklearn", "NLTK"]}
         image={TextApp}
         url={"/text-analysis"}
+        imageAltText="Screenshot of final paper for Text Mining Literature analyzing the sentiment surrounding catholicism during the time period 1820-1865."
       />
 
       <div className="section-marker" ref={contactSectionRef} id={2}>
@@ -161,7 +164,12 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
           </button>
         </div>
         <div className="project-image">
-          <img src={MePic} id={"contact"} className="project-thumbnail" />
+          <img
+            src={MePic}
+            id={"contact"}
+            className="project-thumbnail"
+            alt="A picture of me smiling and sitting down at a cabin."
+          />
         </div>
       </div>
 
