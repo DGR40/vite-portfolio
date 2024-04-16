@@ -10,13 +10,25 @@ export default function Project({
   image,
   url,
   imageAltText,
+  subtext,
+  gitLink,
 }) {
   function goToURL(url) {
     window.open(url, "_blank");
   }
 
+  function handleClick(e) {
+    // Check if the clicked element is the link
+    if (e.target.tagName.toLowerCase() !== "a") {
+      // If not, navigate to the desired location
+      goToURL(url);
+    } else {
+      goToURL(gitLink);
+    }
+  }
+
   return (
-    <div className="project" id={projectId} onClick={() => goToURL(url)}>
+    <div className="project" id={projectId} onClick={handleClick}>
       <div className="project-info">
         <div className="project-header-container">
           <h2 className="project-header">{title}</h2>
@@ -39,6 +51,18 @@ export default function Project({
           alt={imageAltText}
         />
       </div>
+
+      {subtext && (
+        <>
+          <p className="paragraph subtext">test email: budget@budget.com</p>
+          <p className="paragraph">password: pass123</p>
+        </>
+      )}
+      {gitLink && (
+        <div>
+          <a className="paragraph float-right">Github Repo </a>
+        </div>
+      )}
     </div>
   );
 }

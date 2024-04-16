@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import Project from "./project";
+import BudgetApp from "../assets/budgetapp.jpg";
 import SlouchApp from "../assets/slouch-app.jpeg";
 import IvyApp from "../assets/ivy-app.jpeg";
 import TextApp from "../assets/TextAppTall.jpg";
@@ -21,9 +22,9 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
       <div className="section-marker">about</div>
       <div className="main-section" ref={aboutSectionRef} id={0}>
         <p className="paragraph">
-          I began programming in highschool when I started making websites just
-          for fun. Once I learned Javascript, the flood gates opened. I
-          continued my passion for development at{" "}
+          I began programming in high school when I started making websites just
+          for fun. Once I learned Javascript, the floodgates opened. I continued
+          my passion for development at{" "}
           <a
             href="https://infosci.cornell.edu/"
             className="text-highlight"
@@ -42,15 +43,15 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
           how to program, but also about the value of the{" "}
           <span className="text-highlight-subtle"> user experience</span> we
           cultivate. I became fascinated with the thousands of small design
-          choices that combine to deliver the seamless encounters we have with
-          tech everyday. I took classes on{" "}
+          choices that combine to deliver us seamless encounters with tech
+          everyday. I took classes on{" "}
           <span className="text-highlight-subtle">
-            Human Computer Interaction
+            Human-Computer Interaction
           </span>{" "}
           and learned design principles as well as how to implement them. I also
-          excelled in classes such{" "}
+          excelled in classes such as{" "}
           <span className="text-highlight-subtle">
-            Data Driven Web Development
+            Data-Driven Web Development
           </span>{" "}
           and{" "}
           <span className="text-highlight-subtle">
@@ -60,7 +61,7 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
         <br />
         <p className="paragraph">
           While studying, I was able to put the theory into practice when I
-          worked part-time as a Frontend Developer for the venture capital firm{" "}
+          worked part-time as a front-end developer for the venture capital firm{" "}
           <a
             className="text-highlight text-link"
             href="https://teamworthy.com"
@@ -88,8 +89,8 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
         </p>
         <br />
         <p className="paragraph">
-          Outside of coding, I enjoy playing basketball (go Knicks!), hanging
-          with my two dogs, and going to the beach.
+          Outside of coding, I enjoy playing basketball (let's go Knicks),
+          hanging with my two dogs, and going to the beach.
         </p>
         <br />
         <p className="paragraph text-link">
@@ -113,6 +114,28 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
       </div>
 
       <Project
+        title={"BUDGEME: FULL-STACK EXPENSE TRACKER"}
+        projectId={"budgeme"}
+        description={
+          "I designed and built an expense tracker that empowers the user to track, categorize, and visualize their expenses by month and year. Users can create an account and customize their monthly budgets to easily stay on track."
+        }
+        tagList={[
+          "Node.js",
+          "Express",
+          "React",
+          "MongoDB",
+          "RESTful API",
+          "JWT Authentication",
+          "Encryption",
+        ]}
+        image={BudgetApp}
+        url={"https://budgetapp.dannyrusk.com"}
+        imageAltText="Screenshot of Budget Web App made with MERN Stack"
+        subtext={"test email: budget@budget.com \n password: pass123"}
+        gitLink={"https://github.com/DGR40/budget-app-backend"}
+      />
+
+      <Project
         title={"SIT UP: SLOUCH DETECTOR"}
         projectId={"situp"}
         description={
@@ -122,6 +145,7 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
         image={SlouchApp}
         url={"https://dgr40.github.io/slouch-app/"}
         imageAltText="Screenshot of Slouch Detecting Web App made with Tensorflow.js and React"
+        gitLink={"https://github.com/DGR40/slouch-app"}
       />
 
       <Project
@@ -134,6 +158,7 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
         image={IvyApp}
         url={"https://are-ivies-worth-it.netlify.app/"}
         imageAltText="Screenshot of interactive New York Times style article on whether or not Ivy League Education is worth it."
+        gitLink={"https://github.com/DGR40/INFO-4310-Final"}
       />
 
       <Project
