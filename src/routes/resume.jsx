@@ -1,4 +1,4 @@
-import PDF from "../assets/dgrResume2023-Spring.pdf";
+import PDF from "../assets/Resume04182024.pdf";
 import React, { useState, useEffect } from "react";
 
 export default function Resume() {
