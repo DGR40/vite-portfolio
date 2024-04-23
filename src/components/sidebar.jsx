@@ -51,7 +51,9 @@ export default forwardRef(function Sidebar(
             <Name text="DANNY" jumble={"GRHYB"} />
             <Name text="RUSK" jumble={"WXVB"} second={true} />
           </div>
-          <p>Frontend developer, data analyst, dog lover.</p>
+          <p>
+            Frontend developer, data analyst, <br /> dog lover.
+          </p>
         </div>
 
         <div id="menu-items">
