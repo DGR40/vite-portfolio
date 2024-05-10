@@ -52,7 +52,7 @@ export default forwardRef(function Sidebar(
             <Name text="RUSK" jumble={"WXVB"} second={true} />
           </div>
           <p>
-            Frontend developer, data analyst, <br /> dog lover.
+            Software developer, data analyst, <br /> dog lover.
           </p>
         </div>
 

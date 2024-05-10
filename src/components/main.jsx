@@ -114,6 +114,19 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
       </div>
 
       <Project
+        title={"SIT UP: SLOUCH DETECTOR"}
+        projectId={"situp"}
+        description={
+          "I created a productivity tool that uses the browser's webcam and a pose estimation Machine Learning model to monitor the user's posture in real time. It pings the user when they are slouching and provides a dashboard analyzing their sitting habits."
+        }
+        tagList={["Tensorflow.js", "React", "HTML", "CSS", "Javascript"]}
+        image={SlouchApp}
+        url={"https://dgr40.github.io/slouch-app/"}
+        imageAltText="Screenshot of Slouch Detecting Web App made with Tensorflow.js and React"
+        gitLink={"https://github.com/DGR40/slouch-app"}
+      />
+
+      <Project
         title={"BUDGEME: FULL-STACK EXPENSE TRACKER"}
         projectId={"budgeme"}
         description={
@@ -133,19 +146,6 @@ export default forwardRef(function Main({ handleScroll, activeSection }, ref) {
         imageAltText="Screenshot of Budget Web App made with MERN Stack"
         subtext={"test email: budget@budget.com \n password: pass123"}
         gitLink={"https://github.com/DGR40/budget-app-backend"}
-      />
-
-      <Project
-        title={"SIT UP: SLOUCH DETECTOR"}
-        projectId={"situp"}
-        description={
-          "I created a productivity tool that uses the browser's webcam and a pose estimation Machine Learning model to monitor the user's posture in real time. It pings the user when they are slouching and provides a dashboard analyzing their sitting habits."
-        }
-        tagList={["Tensorflow.js", "React", "HTML", "CSS", "Javascript"]}
-        image={SlouchApp}
-        url={"https://dgr40.github.io/slouch-app/"}
-        imageAltText="Screenshot of Slouch Detecting Web App made with Tensorflow.js and React"
-        gitLink={"https://github.com/DGR40/slouch-app"}
       />
 
       <Project
