@@ -1,4 +1,4 @@
-import PDF from "../assets/Resume04182024.pdf";
+import PDF from "../assets/resume05102024.pdf";
 import React, { useState, useEffect } from "react";
 
 export default function Resume() {
